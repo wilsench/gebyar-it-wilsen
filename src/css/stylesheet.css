@@ -2997,6 +2997,10 @@ body {
   background-size: contain;
 }
 
+.bg-cover{
+  background-size: cover;
+}
+
 .bg-fixed{
   background-attachment: fixed;
 }
@@ -3490,6 +3494,10 @@ body {
 
   .md\:justify-self-end{
     justify-self: end;
+  }
+
+  .md\:bg-contain{
+    background-size: contain;
   }
 
   .md\:px-16{
