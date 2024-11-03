@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../public/assets/logo/fts_logo.jpg">
+    <title>Teknik Informatika</title>
+    <link rel="stylesheet" href="../css/stylesheet.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="bg-dot bg-fixed bg-no-repeat bg-contain text-black">
+    <div class="navbar sticky top-0 bg-white shadow-sm md:px-40 px-5 py-5 z-10">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><a href="#">Beranda</a></li>
+              <li>
+                <a>Profil</a>
+                <ul class="p-2">
+                  <li><a href="#deskripsi" class="text-md">Deskripsi PSTI</a></li>
+                  <li><a href="#visi" class="text-md">Visi PSTI</a></li>
+                  <li><a href="#misi" class="text-md">Misi PSTI</a></li>
+                  <li><a href="#organisasi" class="text-md">Struktur Organisasi</a></li>
+                </ul>
+              </li>
+              <li><a>Item 3</a>
+                <ul class="p-2">
+                    <li><label for="prestasi_detail" class="text-md">Prestasi Mahasiswa</label></li>
+                </ul></li>
+            </ul>
+          </div>
+          <a class="w-full">
+            <img src="../../public/assets/logo/fts_logo.jpg" class="w-16" alt="">
+          </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 space-x-10">
+            <li><a href="#" class="btn btn-outline btn-outline-blue hover:bg-gradient-to-r from-blue-600 to-[#9966cc] hover:border-0 hover:text-white px-7">Beranda</a></li>
+            <li>
+              <details>
+                <summary class="btn btn-outline btn-outline-blue hover:bg-gradient-to-r from-blue-600 to-[#9966cc] hover:border-0 hover:text-white py-4 px-16">Profil</summary>
+                <ul class="p-2">
+                    <li><a href="#deskripsi" class="text-md hover:bg-gradient-to-r from-blue-600 to-[#9966cc] hover:text-white">Deskripsi PSTI</a></li>
+                    <li><a href="#visi" class="text-md hover:bg-gradient-to-r from-blue-600 to-[#9966cc] hover:text-white">Visi PSTI</a></li>
+                    <li><a href="#misi" class="text-md hover:bg-gradient-to-r from-blue-600 to-[#9966cc] hover:text-white">Misi PSTI</a></li>
+                    <li><a href="#organisasi" class="text-md hover:bg-gradient-to-r from-blue-600 to-[#9966cc] hover:text-white">Struktur Organisasi</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+                <details>
+                    <summary class="btn btn-outline btn-outline-blue hover:bg-gradient-to-r from-blue-600 to-[#9966cc] hover:border-0 hover:text-white py-4 px-7">Kemahasiswaan</summary>
+                    <ul class="p-2">
+                    <li><label for="prestasi_detail" class="text-md hover:bg-gradient-to-r from-blue-600 to-[#9966cc] hover:text-white">Prestasi Mahasiswa</label></li>
+                    </ul>
+                </details>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <div class="relative inline-block">
+            <button class="btn bg-gradient-to-r from-blue-600 to-[#9966cc] text-white" onclick="togglePopup()"><?xml version="1.0" encoding="UTF-8"?><svg class="xl:block hidden" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M17 17L21 21" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 11C3 15.4183 6.58172 19 11 19C13.213 19 15.2161 18.1015 16.6644 16.6493C18.1077 15.2022 19 13.2053 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11Z" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg> Telusuri</button>
+            <div id="searchPopup" class="absolute right-0 mt-2 w-64 p-4 bg-white rounded-lg shadow-lg hidden">
+              <input type="text" placeholder="Masukkan kata kunci..." class="input input-bordered w-full mb-2">
+              <button class="btn btn-sm w-full">Cari</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <section id="hero" class="min-h-max flex xl:flex-row flex-col xl:gap-0 md:gap-[3rem] gap-[7rem] md:px-40 px-7 xl:py-12 md:py-36 pt-32">
+        <div class="w-full flex flex-col justify-center" data-aos="fade-in" data-aos-duration="2000">
+            <hr class="-mt-10 mb-5 w-32 border-2 border-blue-600">
+            <h1 class="text-black font-semibold lg:text-5xl text-3xl leading-normal tracking-widest">Program Studi <p class="mt-3 bg-gradient-to-r from-blue-600 to-[#9966cc] text-transparent bg-clip-text font-black lg:text-7xl text-5xl relative sm:w-[max-content] font-mono before:absolute before:inset-0 before:animate-typewriter before:bg-white after:absolute after:inset-0 after:w-[0.05em] after:animate-caret after:bg-indigo-400">Teknik Informatika</p></h1>
+            <a href="#deskripsi" class="bg-gradient-to-r from-blue-600 to-[#9966cc] text-white w-max md:px-16 px-10 py-2 rounded-md md:mt-10 mt-5 lg:text-lg text-sm font-semibold hover:pl-20 duration-300 shadow-xl border-b-4 border-indigo-700">Lihat Sekarang</a>
+        </div>
+        <div class="w-full" data-aos="fade-left" data-aos-duration="1500">
+          <h1 class="text-center md:hidden block text-xl font-semibold">Gedung PSTI</h1>
+          <img src="../../public/assets/images/hero_img.png" class="peer w-[100%] scale-[0.8] hover:scale-[0.85] hover:rotate-2 duration-300 cursor-pointer hover " alt="">
+        </div>
+    </section>
+    <div class="w-full xl:my-20 xl:-mt-0 md:-mt-20 mb-10" data-aos="fade-up" data-aos-duration="2000">
+        <h1 class="text-center md:text-4xl text-xl font-bold leading-normal tracking-widest text-black">Teknik Informatika (S1)</h1>
+    </div>
+    <section id="deskripsi" class="md:px-40 px-5 mb-20 md:scroll-mt-80 scroll-mt-40 relative">
+      <div class="flex xl:flex-row flex-col gap-5 mb-5 h-full relative">
+        <div class="flex flex-col h-full w-full gap-5">
+          <div class="flex flex-col gap-8 border border-dashed border-gray-700/50 rounded-lg h-max w-full p-7" data-aos="fade-up" data-aos-duration="1000">
+            <div class="flex flex-col gap-2">
+              <h1 class="font-bold text-lg text-gray-500">Deskripsi Prodi</h1>
+              <p class="text-justify leading-7">PSTI merupakan program studi yang ke empat berdiri di fakultas Teknik dan Sains. Seiring dengan perkembangan kebutuhan akan tenaga teknik di bidang Komputerisasi, Fakultas Teknik dan Sains memiliki 7 program studi yaitu Teknik Informatika, Teknik Mesin, Teknik Elektro, Teknik Informatika, Rekayasa Pertanian dan Biosistem, Sistem Informasi, dan Ilmu lingkungan. Kemajuan Teknologi informasi mendorong calon mahasiswa yang berminat untuk mendalami bidang Informatika. Meskipun demikian, mahasiswa baru di PSTI UIKA tetap ada tiap tahunnya. Alumni angkatan pertama tetah menjadi salah satu corong publikasi bagi PSTI, yang memperkenalkan keberadaan program studi pada kerabat dan kolega. Upaya peningkatan kualitas terus diupayakan salah satunya adalah dengan penerapan sistem penjaminan mutu internal dan sistem manajemen operasional pendidikan ISO 21001 serta meraih peringkat akreditasi B pada tahun 2019. Mahasiswa dimotivasi agar dapat berperan aktif dalam kegiatan kompetisi yang bersifat akademik maupun... <label for="desc_detail" class="text-blue-400 hover:text-blue-600 cursor-pointer">Selengkapnya</label></p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-8 border border-dashed border-gray-700/50 rounded-lg h-max w-full p-7" data-aos="fade-up" data-aos-duration="1000">
+            <div class="flex flex-col gap-2 md:scroll-mt-32 scroll-mt-60" id="visi">
+              <h1 class="font-bold text-lg text-gray-500">Visi Prodi</h1>
+              <p class="text-justify leading-7 italic">Menjadi Program Studi Terkemuka Bidang Informatika Dengan Lulusan Islami Berdaya Saing Regional Tahun 2025.</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-8 border border-dashed border-gray-700/50 rounded-lg h-max w-full p-7" data-aos="fade-up" data-aos-duration="1000">  
+            <div class="flex flex-col gap-2 md:scroll-mt-32 scroll-mt-60" id="misi">
+              <h1 class="font-bold text-lg text-gray-500">Misi Prodi</h1>
+              <ol class="list-decimal ml-4 flex flex-col gap-3 italic">
+                <li>Meningkatkan kualitas Tridharma Program Studi secara berkelanjutan.	</li>
+                <li>Mengembangkan budaya inovasi dalam ilmu pengetahuan.</li>
+                <li>Meningkatkan akses dan peran program studi bagi peningkatan taraf dan kualitas hidup masyarakat.</li>
+                <li>Meningkatkan kualitas penyelenggaraan tata pamong.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col xl:w-max w-full gap-5 w-1/4">
+          <div class="border border-dashed border-gray-700/50 rounded-lg h-max w-full p-7" data-aos="fade-up" data-aos-duration="1000">
+              <h1 class="font-bold text-xl text-black">Artikel Terbaru</h1>
+              <hr class="mt-2 mb-5 w-20 rounded-full border-2 border-blue-600">
+              <div class="w-full flex flex-col justify-between">
+                  <ul class="w-full flex flex-col gap-5 mt-3 py-5 z-0">
+                      <li class="w-full" data-aos="fade-up" data-aos-duration="1000">
+                          <div class="card card-compact bg-base-100 w-full shadow-md group">
+                              <figure class="relative">
+                                  <img src="../../public/assets/images/gedung_1.jpeg" class="brightness-50 group-hover:brightness-100 duration-300" alt="Shoes" />
+                                  <p class="absolute bottom-5 left-2 text-xs font-semibold text-white px-2 py-1 bg-gradient-to-r from-blue-600 to-[#9966cc] w-max rounded-full">30 Oktober 2024. <span class="italic">Chia Wilsen</span></p>
+                              </figure>
+                              <div class="card-body px-5">
+                                  <h2 class="card-title">Gedung Baru PSTI</h2>
+                                  <p>Demi menunjang fasilitas program studi baru yaitu PSTI, Universitas Ibn Khaldun Bogor membangun gedung bar...</p>
+                                  <div class="card-actions justify-end">
+                                      <a href="detail_artikel.html" class="btn btn-outline btn-outline-blue hover:bg-gradient-to-r from-blue-600 to-[#9966cc] hover:border-0 hover:text-white mt-5">Lihat Artikel</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="border border-dashed border-gray-700/50 rounded-lg h-max w-full p-7" data-aos="fade-up" data-aos-duration="1000">
+            <div class="flex w-full">
+              <a href="" class="btn bg-gradient-to-r from-blue-600 to-[#9966cc] text-white w-full font-bold">Lihat Artikel Lainnya</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-8 border border-dashed border-gray-700/50 rounded-lg h-max w-full p-7 mb-5" data-aos="fade-up" data-aos-duration="1000">
+        <div class="flex flex-col gap-2 md:scroll-mt-36 scroll-mt-60" id="organisasi">
+          <h1 class="font-bold text-lg text-gray-500">Struktur Program Studi</h1>
+          <img src="../../public/assets/images/organisasi.jpeg" alt="">
+        </div>
+      </div>
+      <div class="flex xl:flex-row flex-col gap-5">
+        <div class="flex flex-col gap-5 w-full">
+          <div class="flex flex-col gap-8 border border-dashed border-gray-700/50 rounded-lg h-max w-full p-7" data-aos="fade-up" data-aos-duration="1000">
+            <iframe class="w-full md:h-[26rem] h-max md:rounded-0 rounded-md" src="https://www.youtube.com/embed/9CzEftVJJTQ?si=fNx4qgh7acaSY0DH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="flex flex-col gap-2 scroll-mt-36">
+              <h1 class="font-bold text-lg text-gray-500">Akreditasi</h1>
+              <p class="text-justify leading-7">Terakreditasi B oleh BAN-PT (Nomor: 3318/SK/BAN-PT/Akred/S/IX/2019)</p>
+            </div>
+            <div class="flex flex-col gap-2 scroll-mt-36">
+              <h1 class="font-bold text-lg text-gray-500">Prospek Lulusan</h1>
+              <p class="text-justify leading-7">Profesional pada bidang informatika seperti System Analist, data base designer, baik dilembaga pemerintahan maupun swasta, dll.</p>
+            </div>
+          </div>
+          <div class="flex md:flex-row flex-col gap-5 h-max">
+            <div class="flex flex-col gap-8 border border-dashed border-gray-700/50 rounded-lg h-full w-max p-7" data-aos="fade-up" data-aos-duration="1000">
+              <div class="flex flex-col gap-2 scroll-mt-36">
+                <h1 class="font-bold text-lg text-gray-500">Prestasi Mahasiswa</h1>
+                <label for="prestasi_detail" class="btn bg-gradient-to-r from-blue-600 to-[#9966cc] text-white w-max font-bold">Lihat Prestasi Mahasiswa</label>
+              </div>
+            </div>
+            <div class="flex flex-col gap-8 border border-dashed border-gray-700/50 rounded-lg h-full w-full p-7" data-aos="fade-up" data-aos-duration="1000">
+              <div class="flex flex-col gap-2 scroll-mt-36">
+                <h1 class="font-bold text-lg text-gray-500">Kontak Prodi</h1>
+                <p class="text-justify leading-7 flex items-center gap-2 font-semibold"><img src="../../public/assets/images/whatsapp.png" class="w-8" alt="">Pa Hersanto : <a href="https://wa.me/628159118035" class="text-blue-400">+628159118035</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col w-full gap-5">
+          <div class="flex flex-col gap-8 border border-dashed border-gray-700/50 rounded-lg h-max w-full p-7" data-aos="fade-up" data-aos-duration="1000">
+            <div class="flex flex-col gap-2 scroll-mt-32">
+              <h1 class="font-bold text-lg text-gray-500">Tujuan Prodi</h1>
+              <ol class="list-decimal ml-4 flex flex-col gap-3 italic">
+                <li>Menghasilkan lulusan islami berdaya saing regional melalui pelaksanaan kegiatan Tridharma.</li>
+                <li>Menjalin kemitraan dengan para pihak untuk menghasilkan produk penelitian inovatif bidang informatika yang berbasis laboratorium keilmuan Geoinformatics Spasial, Software Engineering, Computer System and Networking, dan Artificial Intelligence.</li>
+                <li>Mengembangkan ilmu pengetahuan dan teknologi serta budaya inovasi melalui percepatan penyerapan teknologi baru dan penyesuaian kurikulum agar dapat menjadi Program Studi terkemuka.</li>
+                <li>Mengembangkan sistem tata pamong yang efektif dan efisien demi keberlanjutan serta penguatan kelembagaan Program Studi secara terencana dengan keluaran (output) dan dampak (outcome) yang jelas.</li>
+              </ol>
+            </div>
+          </div>
+          <div class="flex flex-col gap-8 border border-dashed border-gray-700/50 rounded-lg h-max w-full p-7" data-aos="fade-up" data-aos-duration="1000">
+            <div class="flex flex-col gap-2 scroll-mt-32">
+              <h1 class="font-bold text-lg text-gray-500">Sasaran Prodi</h1>
+              <ol class="list-decimal ml-4 flex flex-col gap-3 italic">
+                <li>Penataan organisasi dan tata kerja di lingkungan Prodi Teknik Informatika.</li>
+                <li>Mengimplementasikan Sistem Penjaminan Mutu Internal (SPMI) dengan penerapan ISO 21001:2018.</li>
+                <li>Peningkatan Nilai Akreditasi program studi.</li>
+                <li>Peningkatan Pelayanan Prima.</li>
+                <li>Meningkatkan jumlah penerimaan mahasiswa melalui selective student.</li>
+                <li>Meningkatkan prestasi mahasiswa dibidang akademik dan non- akademik.</li>
+                <li>Meningkatkan jumlah lulusan.</li>
+                <li>Pemberdayaan peran orang tua dalam mendukung pengembangan akademik dan non akademik.</li>
+                <li>Membangun dan membentuk kapasitas dan Brand Image (citra) Lulusan.</li>
+                <li>Meningkatkan peran alumni.</li>
+                <li>Meningkatkan kualifikasi mutu tenaga pendidik (dosen).</li>
+                <li>Meningkatkan kualifikasi mutu tenaga kependidikan.</li>
+                <li>Meningkatkan kompetensi profesionalisme, budaya kerja, dan disiplin kerja.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="footer">
+        <footer class="footer bg-gray-800 text-white p-10">
+            <nav>
+              <h6 class="footer-title">Menu</h6>
+              <a href="#" class="link link-hover">Beranda</a>
+              <a href="#deskripsi" class="link link-hover">Deskripsi Prodi</a>
+              <a href="#visi" class="link link-hover">Visi Prodi</a>
+              <a href="#misi" class="link link-hover">Misi Prodi</a>
+              <a href="#organisasi" class="link link-hover">Struktur Organisasi</a>
+            </nav>
+            <nav>
+              <h6 class="footer-title">Seputar Kampus</h6>
+              <a href="https://uika-bogor.ac.id" target="_blank" class="link link-hover">Website Kampus</a>
+            </nav>
+            <nav>
+              <h6 class="footer-title">Kemahasiswaan</h6>
+              <label for="prestasi_detail" class="link link-hover">Prestasi Mahasiswa</label>
+            </nav>
+          </footer>
+        <footer class="footer bg-gray-800 text-white border-base-300 border-t px-10 py-4 flex justify-between items-center">
+          <aside class="grid-flow-col items-center">
+            <img src="../../public/assets/logo/fts_logo.jpg" class="w-12 me-2 rounded-md" alt="">
+            <p>
+              <span class="font-black">UIKA</span>
+              <br />
+              Universitas Ibn Khaldun Bogor
+            </p>
+          </aside>
+          <p class="text-md md:block hidden">© Copyright 2024 UIKA Bogor All Rights Reserved.</p>
+          <nav class="md:place-self-center md:justify-self-end">
+            <div class="grid grid-flow-col gap-4">
+              <a href="https://twitter.com/uikabogor" target="_blank">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="fill-current">
+                  <path
+                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/@UIKA-TV" target="_blank">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="fill-current">
+                  <path
+                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                </svg>
+              </a>
+              <a href="facebook.com/pagesuika" target="_blank">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="fill-current">
+                  <path
+                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                </svg>
+              </a>
+            </div>
+          </nav>
+        </footer>
+        <p class="text-sm text-center py-5 font-semibold text-gray-400 md:hidden block">© Copyright 2024 UIKA Bogor All Rights Reserved.</p>
+    </section>
+
+    <!-- Modal Deskripsi -->
+  <input type="checkbox" id="desc_detail" class="modal-toggle w-full" />
+  <div class="modal w-screen" role="dialog">
+    <div class="modal-box max-w-[47rem] p-10">
+      <h3 class="text-lg font-bold text-center">Deskripsi Prodi</h3>
+      <p class="py-4 px-2 indent-7 text-justify">PSTI merupakan program studi yang ke empat berdiri di fakultas Teknik dan Sains. Seiring dengan perkembangan kebutuhan akan tenaga teknik di bidang Komputerisasi, Fakultas Teknik dan Sains memiliki 7 program studi yaitu Teknik Informatika, Teknik Mesin, Teknik Elektro, Teknik Informatika, Rekayasa Pertanian dan Biosistem, Sistem Informasi, dan Ilmu lingkungan. Kemajuan Teknologi informasi mendorong calon mahasiswa yang berminat untuk mendalami bidang Informatika. Meskipun demikian, mahasiswa baru di PSTI UIKA tetap ada tiap tahunnya. Alumni angkatan pertama tetah menjadi salah satu corong publikasi bagi PSTI, yang memperkenalkan keberadaan program studi pada kerabat dan kolega. Upaya peningkatan kualitas terus diupayakan salah satunya adalah dengan penerapan sistem penjaminan mutu internal dan sistem manajemen operasional pendidikan ISO 21001 serta meraih peringkat akreditasi B pada tahun 2019. Mahasiswa dimotivasi agar dapat berperan aktif dalam kegiatan kompetisi yang bersifat akademik maupun non akademik. Kerja sama jurusan dalam bidang pelayanan dan pengabdian masyarakat juga terus ditingkatkan. Pada tahun 2015, PSTI dan FTS melakukan perbaikan secara menyeluruh dan komprehensif, mulai dari peningkatan kualitas dan kuantitas SDM, perbaikan manajemen, perbaikan proses belajar mengajar, peningkatan secara berkala di bidang sarana dan prasarana, serta peninjauan secara berkala kurikulum PSTI, sehingga pada tahun 2019, peringkat akreditasi PSTI UIKA Bogor berada di posisi B.</p>
+
+      <p class="py-4 px-2 indent-7 text-justify">Posisi PSTI UIKA Bogor di tingkat Nasional maupun internasional merupakan hasil kegiatan para Dosen Tetap Pembagi Rasio (DTPR) melalui kegiatan seminar, workshop, serta publikasi skala internasional. Dalam skala nasional, PSTI UIKA mendapatkan atensi dari PTN dan PTS di wilayah timur dan barat, sebagai tempat melaksanakan kegiatan kampus merdeka, yaitu Pertukaran Mahasiswa Merdeka. Selain itu, keterlibatan DTPR sebagai tenaga ahli di beberapa Kementerian dan Lembaga-lembaga Nasional merupakan salah satu bukti bahwa secara kinerja DTPR diperhitungkan secara nasional.
+      </p>
+      
+      <p class="py-4 px-2 indent-7 text-justify">Skala Kota dan Kabupaten Bogor, PSTI telah mendapat pengakuan yang baik dari kelompok masyarakat, pemerintah, serta industri. Hal ini dapat ditelusuri dari hasil tracer study. Beberapa alumni PSTI saat ini menjabat posisi penting di Dinas. Sedangkan, untuk kegiatan mahasiswa meraih beberapa prestasi.
+      </p>
+      
+      <p class="py-4 px-2 indent-7 text-justify">Kondisi eksternal yang sangat mengancam eksistensi PSTI UIKA adalah pandemi COVID 19 pada tahun 2020 sampai dengan 2021. Kebijakan pemerintah untuk menghentikan semua kegiatan perkuliahan tatap muka, penelitian, dan pengabdian masyarakat cukup mempengaruhi kinerja PSTI. Meskipun demikian, kinerja dosen cukup baik di masa pandemi, dengan semakin banyaknya jumlah karya tulis dosen di jurnal-jurnal nasional maupun internasional
+      </p>
+    </div>
+    <label class="modal-backdrop" for="desc_detail">Close</label>
+  </div>
+  
+  <!-- Modal Prestasi -->
+  <input type="checkbox" id="prestasi_detail" class="modal-toggle" />
+  <div class="modal w-screen" role="dialog">
+    <div class="modal-box max-w-[47rem] p-10">
+      <h3 class="text-lg font-bold mb-8">Prestasi Mahasiswa PSTI</h3>
+      <div class="overflow-x-auto">
+        <table class="table table-zebra">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Nama Lomba</th>
+              <th>Prestasi yang didapat</th>
+              <th>Tahun Gelaran</th>
+              <th>Penyelenggara</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>Gelaran Inovasi Daerah (GID)</td>
+              <td>Juara I</td>
+              <td>2020</td>
+              <td>Bappedalitbang Kabupaten Bogor</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>Gelaran Inovasi Daerah (GID)</td>
+              <td>Juara II</td>
+              <td>2020</td>
+              <td>Bappedalitbang Kabupaten Bogor</td>
+            </tr>
+            <tr>
+              <th>3</th>
+              <td>Gelaran Inovasi Daerah (GID)</td>
+              <td>Juara III</td>
+              <td>2020</td>
+              <td>Bappedalitbang Kabupaten Bogor</td>
+            </tr>
+            <tr>
+              <th>4</th>
+              <td>Pemilihan Mahasiswa Berprestasi Tk. LLDIKTI Wilayah IV</td>
+              <td>13 Besar</td>
+              <td>2021</td>
+              <td>LLDIKTI Wilayah IV Jawa Barat & Banten</td>
+            </tr>
+            <tr>
+              <th>5</th>
+              <td>Lomba Karya Tulis</td>
+              <td>Juara I</td>
+              <td>2021</td>
+              <td>Agri-Informatika JIKA</td>
+            </tr>
+            <tr>
+              <th>6</th>
+              <td>Unjuk Gelar Porprov 2022</td>
+              <td>Medali Perunggu</td>
+              <td>2022</td>
+              <td>Porprov XIV 2022 KONI Jawa Barat</td>
+            </tr>
+            <tr>
+              <th>7</th>
+              <td>Lomba Berbaris Jarak Pendek 800 Meter Mix Porprov 2022</td>
+              <td>Medali Perunggu</td>
+              <td>2022</td>
+              <td>Porprov XIV 2022 KONI Jawa Barat</td>
+            </tr>
+            <tr>
+              <th>8</th>
+              <td>Lomba Berbaris Jarak Pendek 800 Meter Putra Porprov 2022</td>
+              <td>Medali Perak</td>
+              <td>2022</td>
+              <td>Porprov XIV 2022 KONI Jawa Barat</td>
+            </tr>
+            <tr>
+              <th>9</th>
+              <td>Gelaran Inovasi Daerah (GID)</td>
+              <td>Juara I</td>
+              <td>2022</td>
+              <td>Bappedalitbang Kabupaten Bogor</td>
+            </tr>
+            <tr>
+              <th>10</th>
+              <td>IISMA 2022</td>
+              <td>Pertukaran Pelajar ke Negara Malaysia</td>
+              <td>2022</td>
+              <td>KEMDIKBUDRISTEKDIKTI</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <label class="modal-backdrop" for="prestasi_detail">Close</label>
+  </div>
+<script>
+  function togglePopup() {
+    var popup = document.getElementById('searchPopup');
+    popup.classList.toggle('hidden');
+  }
+
+  // Optional: Close popup if clicked outside
+  window.onclick = function(event) {
+    if (!event.target.closest('.relative')) {
+      var popup = document.getElementById('searchPopup');
+      if (!popup.classList.contains('hidden')) {
+        popup.classList.add('hidden');
+      }
+    }
+  };
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
