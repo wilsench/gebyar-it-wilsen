@@ -1,0 +1,7 @@
+[build]
+publish = "src/views"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
