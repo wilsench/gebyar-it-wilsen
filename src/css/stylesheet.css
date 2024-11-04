@@ -2620,6 +2620,10 @@ body {
   margin-top: 1.25rem;
 }
 
+.mt-20{
+  margin-top: 5rem;
+}
+
 .block{
   display: block;
 }
@@ -2657,17 +2661,9 @@ body {
   height: max-content;
 }
 
-.max-h-\[500px\]{
-  max-height: 500px;
-}
-
 .min-h-max{
   min-height: -moz-max-content;
   min-height: max-content;
-}
-
-.min-h-\[500px\]{
-  min-height: 500px;
 }
 
 .w-1\/4{
@@ -2731,21 +2727,29 @@ body {
   width: 100vw;
 }
 
-.min-w-max{
-  min-width: -moz-max-content;
-  min-width: max-content;
+.w-1\/2{
+  width: 50%;
+}
+
+.w-\[max-content\]{
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.w-\[50\%\]{
+  width: 50%;
 }
 
 .min-w-\[300px\]{
   min-width: 300px;
 }
 
-.max-w-\[47rem\]{
-  max-width: 47rem;
-}
-
 .max-w-\[300px\]{
   max-width: 300px;
+}
+
+.max-w-\[47rem\]{
+  max-width: 47rem;
 }
 
 .scale-\[0\.8\]{
@@ -2808,6 +2812,10 @@ body {
 
 .grid-flow-col{
   grid-auto-flow: column;
+}
+
+.flex-row{
+  flex-direction: row;
 }
 
 .flex-col{
@@ -2993,10 +3001,6 @@ body {
   --tw-gradient-to: #9966cc var(--tw-gradient-to-position);
 }
 
-.bg-contain{
-  background-size: contain;
-}
-
 .bg-cover{
   background-size: cover;
 }
@@ -3032,10 +3036,6 @@ body {
 
 .p-7{
   padding: 1.75rem;
-}
-
-.p-5{
-  padding: 1.25rem;
 }
 
 .p-8{
@@ -3100,26 +3100,6 @@ body {
 .py-5{
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-}
-
-.px-40{
-  padding-left: 10rem;
-  padding-right: 10rem;
-}
-
-.px-3{
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.py-3{
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
-.px-80{
-  padding-left: 20rem;
-  padding-right: 20rem;
 }
 
 .pb-12{
@@ -3378,10 +3358,6 @@ body {
   background-color: rgb(129 140 248 / var(--tw-bg-opacity));
 }
 
-.hover\:-mt-2:hover{
-  margin-top: -0.5rem;
-}
-
 .hover\:-mt-3:hover{
   margin-top: -0.75rem;
 }
@@ -3409,10 +3385,6 @@ body {
   padding-left: 5rem;
 }
 
-.hover\:pt-2:hover{
-  padding-top: 0.5rem;
-}
-
 .hover\:text-blue-600:hover{
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
@@ -3437,6 +3409,10 @@ body {
     width: -moz-max-content;
     width: max-content;
   }
+
+  .sm\:w-full{
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px){
@@ -3446,6 +3422,10 @@ body {
 
   .md\:mt-10{
     margin-top: 2.5rem;
+  }
+
+  .md\:mt-20{
+    margin-top: 5rem;
   }
 
   .md\:block{
@@ -3460,8 +3440,16 @@ body {
     height: 26rem;
   }
 
+  .md\:h-full{
+    height: 100%;
+  }
+
   .md\:w-\[25\%\]{
     width: 25%;
+  }
+
+  .md\:w-1\/2{
+    width: 50%;
   }
 
   .md\:scroll-mt-32{
@@ -3480,12 +3468,12 @@ body {
     flex-direction: row;
   }
 
-  .md\:gap-\[3rem\]{
-    gap: 3rem;
-  }
-
   .md\:gap-2{
     gap: 0.5rem;
+  }
+
+  .md\:gap-\[3rem\]{
+    gap: 3rem;
   }
 
   .md\:place-self-center{
@@ -3494,10 +3482,6 @@ body {
 
   .md\:justify-self-end{
     justify-self: end;
-  }
-
-  .md\:bg-contain{
-    background-size: contain;
   }
 
   .md\:px-16{
@@ -3510,19 +3494,24 @@ body {
     padding-right: 10rem;
   }
 
+  .md\:px-64{
+    padding-left: 16rem;
+    padding-right: 16rem;
+  }
+
   .md\:py-36{
     padding-top: 9rem;
     padding-bottom: 9rem;
   }
 
-  .md\:px-80{
-    padding-left: 20rem;
-    padding-right: 20rem;
+  .md\:py-40{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
 
-  .md\:px-64{
-    padding-left: 16rem;
-    padding-right: 16rem;
+  .md\:py-32{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 
   .md\:text-4xl{
@@ -3537,6 +3526,18 @@ body {
 }
 
 @media (min-width: 1024px){
+  .lg\:mt-0{
+    margin-top: 0px;
+  }
+
+  .lg\:mt-20{
+    margin-top: 5rem;
+  }
+
+  .lg\:-mt-0{
+    margin-top: -0px;
+  }
+
   .lg\:block{
     display: block;
   }
@@ -3557,6 +3558,15 @@ body {
     width: 65%;
   }
 
+  .lg\:w-1\/2{
+    width: 50%;
+  }
+
+  .lg\:w-\[max-content\]{
+    width: -moz-max-content;
+    width: max-content;
+  }
+
   .lg\:flex-row{
     flex-direction: row;
   }
@@ -3567,6 +3577,10 @@ body {
 
   .lg\:gap-8{
     gap: 2rem;
+  }
+
+  .lg\:gap-0{
+    gap: 0px;
   }
 
   .lg\:place-self-center{
@@ -3587,9 +3601,9 @@ body {
     padding-right: 10rem;
   }
 
-  .lg\:px-80{
-    padding-left: 20rem;
-    padding-right: 20rem;
+  .lg\:py-36{
+    padding-top: 9rem;
+    padding-bottom: 9rem;
   }
 
   .lg\:text-4xl{
@@ -3623,12 +3637,55 @@ body {
     margin-bottom: 5rem;
   }
 
+  .xl\:my-24{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+
+  .xl\:my-32{
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+
   .xl\:-mt-0{
     margin-top: -0px;
   }
 
+  .xl\:mt-10{
+    margin-top: 2.5rem;
+  }
+
   .xl\:block{
     display: block;
+  }
+
+  .xl\:h-max{
+    height: -moz-max-content;
+    height: max-content;
+  }
+
+  .xl\:h-\[100\%\]{
+    height: 100%;
+  }
+
+  .xl\:h-\[20rem\]{
+    height: 20rem;
+  }
+
+  .xl\:h-\[18rem\]{
+    height: 18rem;
+  }
+
+  .xl\:h-\[10rem\]{
+    height: 10rem;
+  }
+
+  .xl\:h-\[15rem\]{
+    height: 15rem;
+  }
+
+  .xl\:h-\[16rem\]{
+    height: 16rem;
   }
 
   .xl\:w-max{
@@ -3636,16 +3693,105 @@ body {
     width: max-content;
   }
 
+  .xl\:w-\[max-content\]{
+    width: -moz-max-content;
+    width: max-content;
+  }
+
+  .xl\:w-1\/2{
+    width: 50%;
+  }
+
+  .xl\:w-\[100\%\]{
+    width: 100%;
+  }
+
+  .xl\:w-\[200px\]{
+    width: 200px;
+  }
+
+  .xl\:w-\[75\%\]{
+    width: 75%;
+  }
+
+  .xl\:w-\[300px\%\]{
+    width: 300px%;
+  }
+
+  .xl\:w-\[200\%\]{
+    width: 200%;
+  }
+
+  .xl\:w-full{
+    width: 100%;
+  }
+
+  .xl\:w-\[40ch\]{
+    width: 40ch;
+  }
+
+  .xl\:w-\[30ch\]{
+    width: 30ch;
+  }
+
   .xl\:flex-row{
     flex-direction: row;
+  }
+
+  .xl\:flex-col{
+    flex-direction: column;
+  }
+
+  .xl\:items-start{
+    align-items: flex-start;
+  }
+
+  .xl\:items-center{
+    align-items: center;
   }
 
   .xl\:gap-0{
     gap: 0px;
   }
 
+  .xl\:gap-5{
+    gap: 1.25rem;
+  }
+
+  .xl\:gap-\[2rem\]{
+    gap: 2rem;
+  }
+
+  .xl\:gap-\[5rem\]{
+    gap: 5rem;
+  }
+
+  .xl\:gap-\[10rem\]{
+    gap: 10rem;
+  }
+
   .xl\:py-12{
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  .xl\:py-20{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .xl\:py-24{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .xl\:py-5{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .xl\:py-0{
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
